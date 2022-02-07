@@ -29,6 +29,8 @@ public final class SkyBlock extends JavaPlugin {
     private final FileConfiguration reclaimConfiguration = new YamlConfiguration();
     private final File data = new File(getDataFolder(), "playerdata.yml");
     private final YamlConfiguration dataConfiguration = new YamlConfiguration();
+    private final File event = new File(getDataFolder(), "event.yml");
+    private final YamlConfiguration eventConfiguration = new YamlConfiguration();
     private Chat chat = null;
 
 
@@ -62,6 +64,7 @@ public final class SkyBlock extends JavaPlugin {
         new FlatFile(config, configuration, "config.yml");
         new FlatFile(reclaim, reclaimConfiguration, "config.yml");
         new FlatFile(data, dataConfiguration, "playerdata.yml");
+        new FlatFile(event, eventConfiguration, "event.yml");
     }
 
     private void command(){
