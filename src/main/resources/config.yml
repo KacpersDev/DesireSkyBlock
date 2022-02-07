@@ -17,3 +17,17 @@ spawn:
   yaw: 0
 
 chat-format: "%rank% &r &7%player%&f: %message%"
+
+balance:
+  usage:
+    - "balance add player amount"
+    - "balance remove player amount"
+    - "balance set player amount"
+    - "balance check"
+    - "balance checkplayer player"
+  check: ""
+  checkplayer: ""
+  add: ""
+  set: ""
+  remove: ""
+  lower0: ""

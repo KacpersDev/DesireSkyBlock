@@ -3,6 +3,7 @@ package net.desiremc;
 import net.desiremc.chat.ChatFormatListener;
 import net.desiremc.config.FlatFile;
 import net.desiremc.data.DataListener;
+import net.desiremc.data.command.BalanceCommand;
 import net.desiremc.reclaim.ReclaimHandler;
 import net.desiremc.scoreboard.ScoreboardHandler;
 import net.desiremc.scoreboard.reflection.Board;
@@ -71,6 +72,7 @@ public final class SkyBlock extends JavaPlugin {
 
         getCommand("setspawn").setExecutor(new SetSpawnCommand());
         getCommand("spawn").setExecutor(new SpawnCommand());
+        getCommand("balance").setExecutor(new BalanceCommand());
     }
 
     private void listener(){
