@@ -36,4 +36,34 @@ public class Data {
                     .replace("%player%", target.getName())));
         }
     }
+
+
+    public Integer getGems(Player player) {
+        return SkyBlock.getInstance().getData().getInt("Player." + player.getUniqueId() + ".Gems");
+    }
+
+    public void addGems(Player player, int amount){
+
+        int balance = (getGems(player) + amount);
+        SkyBlock.getInstance().getData().set("Player." + player.getUniqueId() + ".Gems", balance);
+        DataReload.reload();
+    }
+
+    public void setGems(Player player, int amount){
+
+        SkyBlock.getInstance().getData().set("Player." + player.getUniqueId() + ".Gems", amount);
+        DataReload.reload();
+    }
+
+    public void removeGems(Player target, Player player, int amount) {
+
+        if ((getGems(player) - amount >= 0)) {
+            int newBalance = (getGems(player) - amount);
+            SkyBlock.getInstance().getData().set("Player." + player.getUniqueId() + ".Gems", newBalance);
+            DataReload.reload();
+        }  else {
+            player.sendMessage(CC.translate(SkyBlock.getInstance().getConfig().getString("gems.lower0")
+                    .replace("%player%", target.getName())));
+        }
+    }
 }
