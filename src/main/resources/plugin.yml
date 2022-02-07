@@ -1,0 +1,7 @@
+name: SkyBlock
+version: '${project.version}'
+main: net.desiremc.SkyBlock
+api-version: 1.18
+commands:
+  setspawn:
+  spawn:

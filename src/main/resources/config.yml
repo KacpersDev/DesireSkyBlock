@@ -1,0 +1,19 @@
+no-permissions: "&cYou don't have permissions to execute this command"
+
+scoreboard-title: "&4&lDesire&e&lMC"
+scoreboard-lines:
+  - ""
+  - "&4&l%player%"
+  - "&7Rank&f: %rank%"
+  - "&7Balance&f: %balance%"
+  - "&7Gems&f: %gems%"
+  - "&7&odesiremc.net"
+
+spawn:
+  x: 0
+  y: 100
+  z: 0
+  pitch: 0
+  yaw: 0
+
+chat-format: "%rank% &r &7%player%&f: %message%"
