@@ -1,13 +1,35 @@
 no-permissions: "&cYou don't have permissions to execute this command"
-
+join-message-first: ""
 scoreboard-title: "&4&lDesire&e&lMC"
+title:
+  1: "&c&lD&4&lesire&e&lMC"
+  2: "&4&lD&c&le&4&lsire&e&lMC"
+  3: "&4&lDe&c&ls&4&lire&e&lMC"
+  4: "&4&lDes&c&li&4&lre&e&lMC"
+  5: "&4&lDesi&c&lr&4&le&e&lMC"
+  6: "&4&lDesir&c&le&e&lMC"
 scoreboard-lines:
   - ""
   - "&4&l%player%"
   - "&7Rank&f: %rank%"
   - "&7Balance&f: %balance%"
   - "&7Gems&f: %gems%"
+  - ""
+  - "ISLAND"
+  - "%island_name%"
   - "&7&odesiremc.net"
+scoreboard-lines-with-island:
+  - ""
+  - "&4&l%player%"
+  - "&7Rank&f: %rank%"
+  - "&7Balance&f: %balance%"
+  - "&7Gems&f: %gems%"
+  - ""
+  - "ISLAND"
+  - "%island_name%"
+  - "%leader%"
+  - "&7&odesiremc.net"
+
 
 spawn:
   x: 0
@@ -16,7 +38,9 @@ spawn:
   pitch: 0
   yaw: 0
 
-chat-format: "%rank% &r &7%player%&f: %message%"
+chat-format: "%rank% %player%&f: %message%"
+
+join-message: "&e&l[!] &cWelcome, &4&l%player% &cto &c&lDesireMC! &7(&4#%players%&7)"
 
 balance:
   usage:
@@ -28,7 +52,7 @@ balance:
   check: "You have %balance% of money"
   checkplayer: "%player% has %balance% of money"
   add: "You have added %balance% to %player%"
-  set: "You have set %balance% to %player%"
+  set: "You have set %amount% to %player%"
   remove: "You have removed %balance% from %player%"
   lower0: "%player% does not have %balance% to remove"
 
@@ -45,3 +69,75 @@ gems:
   set: "You have set %balance% to %player%"
   remove: "You have removed %balance% from %player%"
   lower0: "%player% does not have %balance% to remove"
+
+robot:
+  slow:
+    item: "IRON_BLOCK"
+    name: "&eSlow &fRobot Miner"
+    lore:
+      - ""
+      - ""
+      - ""
+    enchantment: "DURABILITY"
+    level: 10
+  medium:
+    item: "GOLD_BLOCK"
+    name: "&cMedium &fRobot Miner"
+    lore:
+      - ""
+      - ""
+      - ""
+    enchantment: "DURABILITY"
+    level: 10
+  fast:
+    item: "DIAMOND_BLOCK"
+    name: "&4Fast &fRobot Miner"
+    lore:
+      - ""
+      - ""
+      - ""
+    enchantment: "DURABILITY"
+    level: 10
+
+generator:
+  iron:
+    item: "IRON_BLOCK"
+    name: "&fIron Generator"
+    lore:
+      - ""
+      - ""
+      - ""
+    enchantment: "DURABILITY"
+    level: 10
+  diamond:
+    item: "DIAMOND_BLOCK"
+    name: "&bDiamond Generator"
+    lore:
+      - ""
+      - ""
+      - ""
+  emerald:
+    item: "EMERALD_BLOCK"
+    name: "&2Emerald Generator"
+    lore:
+      - ""
+      - ""
+      - ""
+
+messager:
+  sale:
+    - "&7&m------------------------------------------------"
+    - "&aSale is currently live on store.desiremc.net"
+    - "&7&m------------------------------------------------"
+  key-all:
+    - "&7&m------------------------------------------------"
+    - "&aKey all is every day at 2 PM "
+    - "&7&m------------------------------------------------"
+  discord:
+    - "&7&m------------------------------------------------"
+    - "&aDiscord - > discord "
+    - "&7&m------------------------------------------------"
+  twitter:
+    - "&7&m------------------------------------------------"
+    - "&aTwitter - > twitter "
+    - "&7&m------------------------------------------------"

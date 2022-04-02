@@ -2,6 +2,7 @@ package net.desiremc.scoreboard.element;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.bukkit.scheduler.BukkitTask;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package net.desiremc.reclaim;
+package net.desiremc.command;
 
 import net.desiremc.SkyBlock;
 import net.desiremc.utils.CC;
@@ -7,9 +7,11 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class ReclaimCommandHandler implements CommandExecutor {
+import java.util.ArrayList;
 
-    private ReclaimHandler reclaimHandler = new ReclaimHandler();
+public class Fly implements CommandExecutor {
+
+    private ArrayList<Player> fly = new ArrayList<>();
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -18,20 +20,22 @@ public class ReclaimCommandHandler implements CommandExecutor {
             return false;
         }
 
-        if (!(sender.hasPermission("skyblock.command.reclaim"))) {
+        if (!(sender.hasPermission("skyblock.command.fly"))) {
             sender.sendMessage(CC.translate(SkyBlock.getInstance().getConfig().getString("no-permissions")));
             return false;
         }
-
         Player player = (Player) sender;
-        if (!reclaimHandler.reclaimed(player)) {
-            reclaimHandler.applyReclaim(player);
-            reclaimHandler.setReclaimed(player, true);
+        if (!fly.contains(player)) {
+            player.setAllowFlight(true);
+            player.setFlying(true);
+            fly.add(player);
+            player.sendMessage(CC.translate("&aFly has been enabled"));
         } else {
-            player.sendMessage(CC.translate("&cYou have already reclaimed."));
-            return false;
+            fly.remove(player);
+            player.setAllowFlight(false);
+            player.setFlying(false);
+            player.sendMessage(CC.translate("&cFly has been disabled"));
         }
         return true;
-
     }
 }

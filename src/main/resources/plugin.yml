@@ -7,3 +7,14 @@ commands:
   spawn:
   balance:
   gems:
+  vanish:
+    aliases: [v]
+  reclaim:
+  staff:
+    aliases: [staffmode, h]
+  robot:
+  kit:
+  casino:
+  fly:
+  crate:
+  automessager:

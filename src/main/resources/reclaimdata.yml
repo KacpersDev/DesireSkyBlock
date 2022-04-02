@@ -1,0 +1,13 @@
+reclaim:
+  1:
+    rank: "Owner"
+    commands:
+      - ""
+      - "give %player% stone"
+      - "say gdhdfhrsfhsr"
+  2:
+    rank: "Manager"
+    commands:
+      - ""
+      - "give %player% grass"
+      - "say dfgdfggdfgdhgfdfhrsfhsr"

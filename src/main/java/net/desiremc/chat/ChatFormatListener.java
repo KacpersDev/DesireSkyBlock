@@ -13,8 +13,6 @@ public class ChatFormatListener implements Listener {
     public void onChat(AsyncPlayerChatEvent event){
 
         Player player = event.getPlayer();
-
-
         event.setFormat(CC.translate(SkyBlock.getInstance().getConfig().getString("chat-format")
                 .replace("%player%", player.getName())
                 .replace("%rank%", CC.translate(SkyBlock.getInstance().getChat().getPrimaryGroup(player)))

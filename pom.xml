@@ -65,13 +65,18 @@
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
+        <repository>
+            <id>bg-repo</id>
+            <url>https://repo.bg-software.com/repository/api/</url>
+        </repository>
     </repositories>
 
     <dependencies>
         <dependency>
-            <groupId>org.github.paperspigot</groupId>
-            <artifactId>paperspigot-api</artifactId>
-            <version>1.7.10-R0.1-SNAPSHOT</version>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.12.2-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.github.MilkBowl</groupId>
@@ -90,6 +95,18 @@
             <artifactId>luckperms-api</artifactId>
             <version>4.3</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.bgsoftware</groupId>
+            <artifactId>SuperiorSkyblockAPI</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/SuperiorSkyblock2API.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.github.KacpersDev</groupId>
+            <artifactId>Venom</artifactId>
+            <version>252ba11630</version>
         </dependency>
     </dependencies>
 </project>

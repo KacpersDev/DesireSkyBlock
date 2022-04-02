@@ -30,7 +30,6 @@ public class SpawnCommand implements CommandExecutor {
         double z = SkyBlock.getInstance().getConfig().getDouble("spawn.z");
 
         player.teleport(new Location(Bukkit.getWorld("World"),x,y,z));
-        player.sendMessage("Rank " + isPlayerInGroup(player, "owner"));
         return true;
     }
 
